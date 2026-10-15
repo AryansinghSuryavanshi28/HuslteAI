@@ -1,0 +1,96 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HustleAI — Product Listing Studio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="navbar">
+    <a class="brand" href="#">✦ HustleAI</a>
+    <span class="local-badge">● Local AI</span>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <span class="eyebrow">YOUR AI SELLING ASSISTANT</span>
+      <h1>Turn products into<br><span>sales-ready listings.</span></h1>
+      <p>Create better product descriptions, discover keywords,
+         and write social captions with AI running on your computer.</p>
+    </section>
+
+    <section class="workspace">
+      <form id="listingForm" class="panel">
+        <h2>Create a listing</h2>
+        <p class="muted">Tell us about your product.</p>
+
+        <label for="product">Product name</label>
+        <input id="product" required
+          placeholder="e.g. Handmade lavender candle">
+
+        <label for="features">Product features</label>
+        <textarea id="features" required rows="4"
+          placeholder="Materials, benefits, size, audience..."></textarea>
+
+        <div class="two-columns">
+          <div>
+            <label for="platform">Platform</label>
+            <select id="platform">
+              <option>Instagram</option>
+              <option>Etsy</option>
+              <option>Amazon</option>
+              <option>Shopify</option>
+            </select>
+          </div>
+          <div>
+            <label for="tone">Writing style</label>
+            <select id="tone">
+              <option>Friendly</option>
+              <option>Professional</option>
+              <option>Luxury</option>
+              <option>Playful</option>
+            </select>
+          </div>
+        </div>
+
+        <button id="generateBtn" type="submit">
+          ✨ Generate my listing
+        </button>
+        <p class="privacy">🔒 Designed for private, local AI processing.</p>
+      </form>
+
+      <section class="panel output-panel">
+        <div class="output-heading">
+          <div>
+            <span class="eyebrow">YOUR RESULTS</span>
+            <h2>Listing studio</h2>
+          </div>
+          <span class="sparkle">✦</span>
+        </div>
+
+        <div id="status" class="status">Ready to create something great.</div>
+
+        <div id="results" class="results" aria-live="polite">
+          <div class="empty-state">
+            <div class="empty-icon">✎</div>
+            <h3>Your next great listing starts here</h3>
+            <p>Fill out the form and let your local AI assistant do the writing.</p>
+          </div>
+        </div>
+
+        <button id="downloadBtn" class="secondary" hidden>
+          ↓ Download listing
+        </button>
+      </section>
+    </section>
+
+    <footer>
+      Built for independent sellers. Powered by open-weight AI.
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
